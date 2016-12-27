@@ -7,33 +7,40 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "FlickrNetwoking.h"
 
-@interface FlickrPhotosTests : XCTestCase
 
+@interface FlickrPhotosTests : XCTestCase {
+    FlickrNetwoking *flickrNetwoking;
+}
 @end
+
 
 @implementation FlickrPhotosTests
 
+
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    flickrNetwoking = [FlickrNetwoking new];
 }
 
+
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+- (void)testFlickrAPI {
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+
+    [flickrNetwoking fetchFlickrPhotos:@"xmas+cats" loadMore:NO block:^(NSArray *photos, NSError *error) {
+        XCTAssertNil(error, @"flickr.photos.search request failed with error: %@", error);
+        XCTAssert(photos, @"flickr.photos.search request has response nil");
+        dispatch_semaphore_signal(semaphore);
+    }];
+    long rc = dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 60.0 * NSEC_PER_SEC));
+    XCTAssertEqual(rc, 0, @"flickr.photos.search request timed out");
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
 
 @end
