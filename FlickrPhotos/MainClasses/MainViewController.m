@@ -12,6 +12,7 @@
 #import "FlickrNetwoking.h"
 #import "FlickrPhoto.h"
 #import "SVProgressHUD.h"
+#import "DetailViewController.h"
 
 
 @interface MainViewController () {
@@ -35,6 +36,15 @@
     // init data
     data = @[].mutableCopy;
     flickrNetwoking = [FlickrNetwoking new];
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:showDetailSegue]) {
+        NSIndexPath *index = [[self.collectionView indexPathsForSelectedItems] firstObject];
+        DetailViewController *detailViewController = (DetailViewController *)segue.destinationViewController;
+        detailViewController.photo = data[index.row];
+    }
 }
 
 
@@ -103,13 +113,6 @@
     return cell;
 }
 
-
-#pragma mark - UICollectionViewDelegate
-
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
 
 
 #pragma mark - UIScrollViewDelegate

@@ -13,11 +13,13 @@
 
 
 /**
- * Request image property
+ * Request UIImage property
  *
  * @param urlString photo's url string
+ * @param hasPlaceholder tells if the image has a placeholder
+ * @param isThumbnail tells if the image is a thumbnail, in this case it's used a normal UIActivityIndicatorView
  */
-- (void)setImageFromUrl:(NSString *)urlString;
+- (void)setImageFromUrl:(NSString *)urlString hasPlaceholder:(BOOL)hasPlaceholder isThumbnail:(BOOL)isThumbnail;
 
 
 @end

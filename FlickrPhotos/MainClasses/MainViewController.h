@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface MainViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UIScrollViewDelegate>
+@interface MainViewController : UIViewController <UICollectionViewDataSource, UISearchBarDelegate, UIScrollViewDelegate>
 
 
 @end

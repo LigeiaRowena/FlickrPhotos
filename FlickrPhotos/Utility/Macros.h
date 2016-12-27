@@ -15,7 +15,6 @@
 
 
 static NSString *showDetailSegue = @"showDetail";
-static NSString *showPhotoSegue = @"showPhoto";
 static NSString *cellIdentifier = @"cellIdentifier";
 static NSString *flickrBaseUrl = @"https://api.flickr.com/services/rest/";
 static NSString *flickrMethod = @"flickr.photos.search";

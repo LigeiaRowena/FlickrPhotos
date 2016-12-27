@@ -32,7 +32,7 @@
 
 
 - (void)setContent:(FlickrPhoto *)model {
-    [self.thumbnail setImageFromUrl:model.thumbnailUrl];
+    [self.thumbnail setImageFromUrl:model.thumbnailUrl hasPlaceholder:YES isThumbnail:YES];
 }
 
 

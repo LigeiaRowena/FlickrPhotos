@@ -54,6 +54,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="thumbnail" destination="Jc0-uf-9iV" id="uwL-hB-bv9"/>
+                                            <segue destination="Q3T-ay-rcv" kind="show" identifier="showDetail" id="03U-ca-1oC"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -84,6 +85,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="SPn-dl-yDK">
+            <objects>
+                <viewController id="Q3T-ay-rcv" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kzc-Ql-O3P"/>
+                        <viewControllerLayoutGuide type="bottom" id="LKA-bx-LCO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LbV-lq-jWX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lmv-uL-lFX">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Lmv-uL-lFX" secondAttribute="trailing" id="OqA-mD-Ote"/>
+                            <constraint firstItem="LKA-bx-LCO" firstAttribute="top" secondItem="Lmv-uL-lFX" secondAttribute="bottom" id="Uu0-Ll-yIp"/>
+                            <constraint firstItem="Lmv-uL-lFX" firstAttribute="top" secondItem="kzc-Ql-O3P" secondAttribute="bottom" id="nP8-gu-Q7B"/>
+                            <constraint firstItem="Lmv-uL-lFX" firstAttribute="leading" secondItem="LbV-lq-jWX" secondAttribute="leading" id="r3O-Gl-1OI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Lmv-uL-lFX" id="tYy-yM-oeU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K0n-ns-Tfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2309.5999999999999" y="136.28185907046478"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7E1-RT-zYK">

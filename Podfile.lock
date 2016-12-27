@@ -1,20 +1,12 @@
 PODS:
-  - macros_blocks (0.0.1)
-  - SCNetworkReachability (2.0.5):
-    - SCNetworkReachability/Core (= 2.0.5)
-  - SCNetworkReachability/Core (2.0.5):
-    - macros_blocks (= 0.0.1)
   - SVProgressHUD (2.0.4)
 
 DEPENDENCIES:
-  - SCNetworkReachability
   - SVProgressHUD
 
 SPEC CHECKSUMS:
-  macros_blocks: da2106a0975514e16f3669f2f50a02efaff642cf
-  SCNetworkReachability: 14026e754d9abb264c157131539e8e2c2131cb62
   SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
 
-PODFILE CHECKSUM: e992412b8edd39161718f9eb9d278e0201e8110c
+PODFILE CHECKSUM: b212aea5eb62b64bf114594179303bd0bf05132e
 
 COCOAPODS: 1.1.1

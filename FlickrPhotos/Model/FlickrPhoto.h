@@ -19,7 +19,7 @@
 
 
 /**
- * Init the model
+ * Init model
  *
  */
 - (id)initFlickrPhotoWithDictionary:(NSDictionary *)dictionary;

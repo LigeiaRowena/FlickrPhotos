@@ -21,6 +21,7 @@
 		DF89AADD1E11808C00E9AEAF /* FlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DF89AADC1E11808C00E9AEAF /* FlickrPhoto.m */; };
 		DF89AAE01E118F7700E9AEAF /* UIImageView+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = DF89AADF1E118F7700E9AEAF /* UIImageView+Utility.m */; };
 		DF9C095E1E12C2DF00BB7620 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9C095D1E12C2DF00BB7620 /* Reachability.m */; };
+		DF9C09611E12C41E00BB7620 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9C09601E12C41E00BB7620 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		DF89AADF1E118F7700E9AEAF /* UIImageView+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Utility.m"; sourceTree = "<group>"; };
 		DF9C095C1E12C2DF00BB7620 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		DF9C095D1E12C2DF00BB7620 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		DF9C095F1E12C41E00BB7620 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		DF9C09601E12C41E00BB7620 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		E0B66E8DA13F3B414370CADB /* Pods-FlickrPhotosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrPhotosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrPhotosTests/Pods-FlickrPhotosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +180,8 @@
 				DF5A3C3A1E0AC4A1000DA14B /* AppDelegate.m */,
 				DF5A3C3B1E0AC4A1000DA14B /* MainViewController.h */,
 				DF5A3C3C1E0AC4A1000DA14B /* MainViewController.m */,
+				DF9C095F1E12C41E00BB7620 /* DetailViewController.h */,
+				DF9C09601E12C41E00BB7620 /* DetailViewController.m */,
 			);
 			path = MainClasses;
 			sourceTree = "<group>";
@@ -421,6 +426,7 @@
 			files = (
 				DF5A3C3E1E0AC4A1000DA14B /* MainViewController.m in Sources */,
 				DF5A3C3D1E0AC4A1000DA14B /* AppDelegate.m in Sources */,
+				DF9C09611E12C41E00BB7620 /* DetailViewController.m in Sources */,
 				DF9C095E1E12C2DF00BB7620 /* Reachability.m in Sources */,
 				DF5A3C101E0AC30E000DA14B /* main.m in Sources */,
 				DF89AAE01E118F7700E9AEAF /* UIImageView+Utility.m in Sources */,
