@@ -20,6 +20,7 @@
 		DF89AADA1E11656900E9AEAF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF89AAD91E11656900E9AEAF /* Default-568h@2x.png */; };
 		DF89AADD1E11808C00E9AEAF /* FlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DF89AADC1E11808C00E9AEAF /* FlickrPhoto.m */; };
 		DF89AAE01E118F7700E9AEAF /* UIImageView+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = DF89AADF1E118F7700E9AEAF /* UIImageView+Utility.m */; };
+		DF9C095E1E12C2DF00BB7620 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9C095D1E12C2DF00BB7620 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		DF89AADC1E11808C00E9AEAF /* FlickrPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhoto.m; sourceTree = "<group>"; };
 		DF89AADE1E118F7700E9AEAF /* UIImageView+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Utility.h"; sourceTree = "<group>"; };
 		DF89AADF1E118F7700E9AEAF /* UIImageView+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Utility.m"; sourceTree = "<group>"; };
+		DF9C095C1E12C2DF00BB7620 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		DF9C095D1E12C2DF00BB7620 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		E0B66E8DA13F3B414370CADB /* Pods-FlickrPhotosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrPhotosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrPhotosTests/Pods-FlickrPhotosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,6 +193,8 @@
 		DF5A3C361E0AC406000DA14B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DF9C095C1E12C2DF00BB7620 /* Reachability.h */,
+				DF9C095D1E12C2DF00BB7620 /* Reachability.m */,
 				DF89AAD61E11651800E9AEAF /* FlickrNetwoking.h */,
 				DF89AAD71E11651800E9AEAF /* FlickrNetwoking.m */,
 			);
@@ -329,7 +334,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		22FE5945CE93971AD84E5A75 /* [CP] Embed Pods Frameworks */ = {
@@ -404,7 +409,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -416,6 +421,7 @@
 			files = (
 				DF5A3C3E1E0AC4A1000DA14B /* MainViewController.m in Sources */,
 				DF5A3C3D1E0AC4A1000DA14B /* AppDelegate.m in Sources */,
+				DF9C095E1E12C2DF00BB7620 /* Reachability.m in Sources */,
 				DF5A3C101E0AC30E000DA14B /* main.m in Sources */,
 				DF89AAE01E118F7700E9AEAF /* UIImageView+Utility.m in Sources */,
 				DF89AADD1E11808C00E9AEAF /* FlickrPhoto.m in Sources */,

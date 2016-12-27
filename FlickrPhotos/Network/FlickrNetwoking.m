@@ -10,8 +10,7 @@
 #import "FlickrNetwoking.h"
 #import "Macros.h"
 #import "FlickrPhoto.h"
-
-//#import "Reachability.h"
+#import "Reachability.h"
 
 
 @interface FlickrNetwoking () {
@@ -54,17 +53,29 @@
 
 
 - (void)fetchFlickrPhotos:(NSString *)searchTerm loadMore:(BOOL)loadMore block:(void (^)(NSArray *photos, NSError *error))block {
+    
+    // set Reachability object to check internet connection
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    [reachability startNotifier];
+    NetworkStatus netStatus = [reachability currentReachabilityStatus];
+    if (netStatus == NotReachable) {
+        NSError *networkError = [[NSError alloc] initWithDomain:NSLocalizedDescriptionKey code:0 userInfo:@{@"description": @"Internet connection not available"}];
+        NSLog(@"Error: %@", [networkError localizedDescription]);
+        block(nil, networkError);
+        return;
+    }
+    
+    // manage different pages for request
     if (loadMore)
         currentPage++;
-    
     if (!isEmptyString(searchTerm)) {
-        // different fetch
         if (![searchTerm isEqualToString:searchString]) {
             [self reset];
         }
         searchString = searchTerm;
     }
     
+    // flickr.photos.search request
     NSString *stringUrl = [NSString stringWithFormat:@"%@?method=%@&api_key=%@&text=%@&media=photos&page=%lu&format=json&nojsoncallback=1", flickrBaseUrl, flickrMethod, flickrApiKey, searchString, (unsigned long)currentPage];
     NSURL *url = [NSURL URLWithString:stringUrl];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -96,18 +107,6 @@
             block(nil, dataError);
         }
     });
-
-    
-    /*
-    // set Reachability object to check internet connection
-    Reachability *reachability = [Reachability reachabilityForInternetConnection];
-    [reachability startNotifier];
-    NetworkStatus netStatus = [reachability currentReachabilityStatus];
-    if (netStatus == NotReachable) {
-        block(nil, @"Internet connection not available");
-        return;
-    }
-    */
 }
 
 

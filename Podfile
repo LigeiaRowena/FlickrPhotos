@@ -6,7 +6,6 @@ target 'FlickrPhotos' do
   # use_frameworks!
 
   pod 'SVProgressHUD'
-  pod 'SCNetworkReachability'
   
   # Pods for FlickrPhotos
 
